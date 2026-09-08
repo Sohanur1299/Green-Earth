@@ -121,34 +121,33 @@
             <aside class="hidden lg:block bg-white rounded-xl p-4 shadow-sm border border-[#e0eee4]">
                 <h3 class="font-bold mb-3">Category</h3>
                 <div class="space-y-2 text-sm">
-                    <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="category" class="radio radio-xs radio-success" checked />
-                        <span>All Trees</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="category" class="radio radio-xs radio-success" />
-                        <span>Indoor Plants</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="category" class="radio radio-xs radio-success" />
-                        <span>Outdoor Plants</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="category" class="radio radio-xs radio-success" />
-                        <span>Flowering</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="category" class="radio radio-xs radio-success" />
-                        <span>Succulents</span>
-                    </label>
+                    <button class="block hover:text-success font-medium">
+                        All Trees
+                    </button>
+
+                    <button class="block text-gray-600 hover:text-success">
+                        Indoor Plants
+                    </button>
+
+                    <button class="block text-gray-600 hover:text-success">
+                        Outdoor Plants
+                    </button>
+
+                    <button class="block text-gray-600 hover:text-success">
+                        Flowering
+                    </button>
+
+                    <button class="block text-gray-600 hover:text-success">
+                        Succulents
+                    </button>
                 </div>
 
-                <div class="divider my-4"></div>
+                <!-- <div class="divider my-4"></div>
                 <h3 class="font-bold mb-3">Price</h3>
                 <input type="range" min="0" max="100" value="60" class="range range-xs range-success" />
                 <div class="flex justify-between text-xs text-gray-500 mt-1">
                     <span>$0</span><span>$100</span>
-                </div>
+                </div> -->
             </aside>
 
             <!-- PRODUCT GRID -->
@@ -300,6 +299,88 @@
             </aside>
         </div>
     </main>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-[#f1faf4] py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#124b2c]">About Green Earth</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="bg-white rounded-2xl p-5 sm:p-8 shadow-sm flex justify-center">
+                    <img src="./assets/plant.png" alt="Green Earth plant"
+                        class="w-56 sm:w-72 h-64 sm:h-80 object-contain" />
+                </div>
+                <div>
+                    <p class="text-sm sm:text-base leading-7 text-[#5c7464]">
+                        Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since
+                        our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
+                        forests, create habitats for wildlife, and combat global warming.
+                    </p>
+
+                    <ul class="mt-4 text-sm sm:text-base leading-7 text-[#5c7464]">
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-[#c9f0d7] py-10 sm:py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-center text-xl sm:text-2xl font-extrabold text-[#124b2c] mb-6">Our Impact</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl p-5 text-center shadow-sm">
+                    <div class="text-2xl sm:text-3xl font-black text-[#087b3d]">500K+</div>
+                    <div class="text-sm text-gray-500 mt-1">Trees Planted</div>
+                </div>
+                <div class="bg-white rounded-xl p-5 text-center shadow-sm">
+                    <div class="text-2xl sm:text-3xl font-black text-[#087b3d]">120+</div>
+                    <div class="text-sm text-gray-500 mt-1">Communities Involved</div>
+                </div>
+                <div class="bg-white rounded-xl p-5 text-center shadow-sm">
+                    <div class="text-2xl sm:text-3xl font-black text-[#087b3d]">30+</div>
+                    <div class="text-sm text-gray-500 mt-1">Countries Reached </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-[#086b36] text-white py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center">
+                <h2 class="text-2xl sm:text-3xl font-extrabold">Plant a Tree Today</h2>
+            </div>
+
+            <form class="max-w-md mx-auto mt-7 bg-[#087b3d] rounded-2xl p-4 sm:p-5 shadow-lg">
+                <input type="text" placeholder="Your Name"
+                    class="input input-sm sm:input-md w-full mb-3 bg-white text-gray-800 border-none" />
+                <input type="email" placeholder="Your Email address"
+                    class="input input-sm sm:input-md w-full mb-3 bg-white text-gray-800 border-none" />
+
+                <textarea placeholder="Your message"
+                    class="textarea textarea-sm sm:textarea-md w-full mb-3 bg-white text-gray-800 border-none"
+                    rows="3"></textarea>
+
+                <button
+                    class="btn w-full rounded-full bg-[#ffd51c] hover:bg-[#f5c800] border-none text-[#173d28] font-bold">
+                    Donate Now
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#07572d] text-white">
+        <div class="max-w-7xl mx-auto px-5 py-7 text-center">
+            <p class="text-xs text-white/50 mt-4">© 2026 Green Earth. All rights reserved.</p>
+        </div>
+    </footer>
 
 
     <script src="index.js"></script>
