@@ -22,6 +22,13 @@
             font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
 
+        .active {
+            color: white;
+            background: #15803D;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
         .leaf-bg {
             background-image: url("./assets/leaf.png"),
                 url("./assets/leaf.png");
@@ -42,7 +49,6 @@
 </head>
 
 <body class="bg-[#f1faf4] text-[#173d28]">
-
 
     <!-- NavBar -->
     <header class="bg-[#087b3d] text-white sticky top-0 z-50 shadow-sm">
@@ -122,9 +128,11 @@
                 <h3 class="font-bold mb-3">Category</h3>
 
                 <div class="space-y-2 text-sm" id="category-parent">
-                    <!-- <button class="block hover:text-success font-medium">
+                    <button class="block hover:text-success font-medium">
                         All Trees
                     </button>
+
+                    <!-- 
 
                     <button class="block text-gray-600 hover:text-success">
                         Indoor Plants
@@ -147,19 +155,19 @@
             <!-- PRODUCT GRID -->
             <section>
                 <div class="flex lg:hidden gap-2 mb-4">
-                    <select class="select select-sm select-bordered bg-white w-full">
-                        <option>All Plants</option>
+                    <select class="select select-sm select-bordered bg-white w-full" id="category-select-parent">
+                        <!-- <option>All Plants</option>
                         <option>Indoor Plants</option>
                         <option>Outdoor Plants</option>
                         <option>Flowering</option>
-                        <option>Succulents</option>
+                        <option>Succulents</option> -->
                     </select>
                     <button class="btn btn-sm bg-white border-[#d6e6db]">Filter</button>
                 </div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4" id="card-parent">
                     <!-- Card -->
-                    <article class="card bg-white border border-[#e1eee5] shadow-sm hover:shadow-md transition">
+                    <!-- <article class="card bg-white border border-[#e1eee5] shadow-sm hover:shadow-md transition">
                         <figure class="h-28 sm:h-36 bg-[#f4f7f4]">
                             <img src="./assets/plant.png" alt="Green plant" class="h-full w-full object-contain p-3" />
                         </figure>
@@ -262,7 +270,7 @@
                                 class="btn btn-sm min-h-8 h-8 mt-2 rounded-full bg-[#087b3d] hover:bg-[#066a34] border-none text-white">Add
                                 to cart</button>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
             </section>
 
