@@ -1,5 +1,5 @@
 let dataCenter = [];
-
+const cart = {};
 // 3
 async function all_trees_fetch() {
     try {
@@ -123,7 +123,6 @@ document.getElementById("category-parent").addEventListener("click", ((event) =>
     if (event.target.id !== "category-parent") {
         // console.log(event.target);
         const target_category = event.target.innerText;
-
 
         if (target_category === "All Trees") {
             display_cards(dataCenter);
