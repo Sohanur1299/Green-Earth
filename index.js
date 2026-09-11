@@ -135,7 +135,6 @@ function display_categories(data) {
 
 }
 
-
 const update_active = ((btn) => {
     const get_all_active = document.getElementsByClassName("active");
     for (const each_active of get_all_active) {
