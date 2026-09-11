@@ -81,7 +81,7 @@ function displayCart() {
     cartParent.appendChild(childOne);
 
     const childTwo = document.createElement("div");
-    childTwo.innerHTML = `<span>Total</span><span class="text-[#087b3d]">৳${carSum}</span>`;
+    childTwo.innerHTML = `<span>Total </span><span class="text-[#087b3d]">৳${carSum}</span>`;
 
     cartParent.appendChild(childTwo);
 
@@ -156,7 +156,6 @@ auto_category_fetch()
     .catch((err) => {
         console.log(`from outside error ${err}`);
     })
-
 
 
 // add Event Listener to Desktop Version
