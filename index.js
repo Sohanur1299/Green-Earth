@@ -1,5 +1,6 @@
 let dataCenter = [];
-const cart = {}; // remaining
+const cartHolder = {}; // remaining
+let carSum = 0;
 
 
 // 3
@@ -37,7 +38,7 @@ function display_cards(data) {
                                 <span class="font-bold text-[#087b3d]">${card.category}</span>
                                 <span class="text-xs">$${card.price}</span>
                             </div>
-                            <button
+                            <button onclick="set_cart('${card.name}', ${card.price}, '${card.category}')"
                                 class="btn btn-sm min-h-8 h-8 mt-2 rounded-full bg-[#087b3d] hover:bg-[#066a34] border-none text-white">
                                 Add to cart
                             </button>
@@ -45,7 +46,44 @@ function display_cards(data) {
         `
         card_parent.appendChild(new_card);
     }
+}
 
+// set 1
+const set_cart = ((name, price, category) => {
+    console.log('add pressed', name, price, category);
+    if (!cartHolder[name]) {
+        cartHolder[name] = [price, 1]; // Create this Object
+        // carSum += (cartHolder[name][0] * cartHolder[name][1]) // sum done
+    } else {
+        cartHolder[name][1] += 1; // Update the Object Count
+    }
+    carSum += (cartHolder[name][0]) // sum done
+    // console.log(cartHolder, carSum);
+    displayCart();
+})
+
+// set 2
+function displayCart() {
+    const cartParent = document.getElementById("cart-parent");
+    cartParent.innerHTML = "";
+
+    const childOne = document.createElement("div");
+    for (const eachProd in cartHolder) {
+        const newProd = document.createElement("div");
+        newProd.classList.add("gap-3",
+            "p-3",
+            "bg-neutral-100",
+            "rounded-xl");
+        newProd.innerHTML = `<p>${eachProd}</p>
+                            <span><b>৳${cartHolder[eachProd][0]} × ${cartHolder[eachProd][1]}</b></span>`
+        childOne.appendChild(newProd);
+    }
+    cartParent.appendChild(childOne);
+
+    const childTwo = document.createElement("div");
+    childTwo.innerHTML = `<span>Total</span><span class="text-[#087b3d]">৳${carSum}</span>`;
+
+    cartParent.appendChild(childTwo);
 
 }
 
