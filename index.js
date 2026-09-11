@@ -1,5 +1,7 @@
 let dataCenter = [];
-const cart = {};
+const cart = {}; // remaining
+
+
 // 3
 async function all_trees_fetch() {
     try {
@@ -118,7 +120,8 @@ auto_category_fetch()
     })
 
 
-// add Event Listener
+
+// add Event Listener to Desktop Version
 document.getElementById("category-parent").addEventListener("click", ((event) => {
     if (event.target.id !== "category-parent") {
         // console.log(event.target);
@@ -130,6 +133,32 @@ document.getElementById("category-parent").addEventListener("click", ((event) =>
             return;
         }
 
+        const filterd_arr = dataCenter.filter((plant) => {
+            if (plant.category === target_category) {
+                return plant;
+            }
+        })
+
+        display_cards(filterd_arr);
+        update_active(event.target);
+
+
+    }
+
+}))
+
+
+// add Event Listener to  Mobile Version
+document.getElementById("category-select-parent").addEventListener("click", ((event) => {
+    if (event.target.id !== "category-select-parent") {
+        // console.log(event.target);
+        const target_category = event.target.innerText;
+
+        if (target_category === "All Plants") {
+            display_cards(dataCenter);
+            update_active(event.target);
+            return;
+        }
 
         const filterd_arr = dataCenter.filter((plant) => {
             if (plant.category === target_category) {
